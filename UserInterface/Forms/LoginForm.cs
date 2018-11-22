@@ -16,5 +16,18 @@ namespace UserInterface.Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int age = Convert.ToInt32(textBox1.Text);
+            if (age >=18)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Еще юн щегол!!!");
+            }
+        }
     }
 }
