@@ -19,7 +19,17 @@ namespace UserInterface.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int age = Convert.ToInt32(textBox1.Text);
+            int age;
+            try
+            {
+                age = Convert.ToInt32(textBox1.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Введи цифры неуч!!!");
+                return;
+            }
+           
             if (age >=18)
             {
                 var main = new MainForm();
@@ -31,6 +41,11 @@ namespace UserInterface.Forms
             {
                 MessageBox.Show("Еще юн щегол!!!");
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Login form has been show");
         }
     }
 }
