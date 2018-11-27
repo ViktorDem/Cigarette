@@ -18,6 +18,7 @@ namespace UserInterface
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
+            System.Diagnostics.Debug.WriteLine("Login form has been show");
         }
     }
 }
