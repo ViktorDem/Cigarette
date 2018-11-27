@@ -22,6 +22,7 @@ namespace UserInterface.Forms
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.Writeline("main vindow has been loaded");
             WebClient client = new WebClient();
             string result = await client.DownloadStringTaskAsync("https://jsonplaceholder.typicode.com/posts");
             List<Post> post = JsonConvert.DeserializeObject<List<Post>>(result);
